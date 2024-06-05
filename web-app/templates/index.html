@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <form action="/add" method="post" class="add-form">
+            <input type="text" name="todo" placeholder="Enter a new task" required>
+            <button type="submit">Add</button>
+        </form>
+        <ul class="todo-list">
+            {% for todo in todos %}
+                <li class="todo-item">
+                    <form action="/delete/{{ todo._id }}" method="post" class="delete-form">
+                        <input type="checkbox" name="done" onclick="this.form.submit()">
+                        <span>{{ todo.task }}</span>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+
