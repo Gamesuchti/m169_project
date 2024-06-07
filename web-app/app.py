@@ -5,7 +5,7 @@ from bson.objectid import ObjectId  # Import ObjectId from bson
 app = Flask(__name__)
 
 # Configuration
-app.config['MONGO_URI'] = "mongodb://localhost:27017/todo_db"
+app.config['MONGO_URI'] = "mongodb://mongodb:27017/todo_db"
 
 # Initialize MongoDB client
 client = MongoClient(app.config['MONGO_URI'])
