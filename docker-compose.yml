@@ -1,0 +1,21 @@
+services:
+  web:
+    image: m169-python:latest
+    command: python app.py
+    networks:
+      - web-network
+    ports:
+      - "5000:5000"
+    links:
+      - db
+  db:
+    image: mongo:latest
+    hostname: mongodb
+    networks:
+      - web-network
+    ports:
+      - "27017:27017"
+
+networks:
+  web-network:
+    driver: bridge
