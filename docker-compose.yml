@@ -1,6 +1,6 @@
 services:
   web:
-    image: m169-python:v5
+    image: timboss/m169-python:v5
     command: python app.py
     ports:
       - "5000:5000"
