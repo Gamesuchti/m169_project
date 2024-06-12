@@ -2,14 +2,14 @@
 
 ## Voraussetzungen
 
-Bevor man beginnt, sollte man sicher stellen, dass man Folgendes auf dem System installiert ist:
+Bevor man beginnt, sollte man sicher stellen, dass man Folgendes auf dem System installiert hat:
 
 - Docker: [Docker installieren](https://docs.docker.com/get-docker/)
 - Docker Compose: [Docker Compose installieren](https://docs.docker.com/compose/install/)
 
 ## Anleitung
 
-Folgende Schritte befolgen, um das M169 Projekt mit Docker Compose auszuführen:
+Folgende Schritte befolgen, um die To-Do App mit Docker Compose auszuführen:
 
 1. **Repository clonen**
 
@@ -20,8 +20,15 @@ Folgende Schritte befolgen, um das M169 Projekt mit Docker Compose auszuführen:
 
 2. **Container starten**
 
-   Docker Compose verwenden, um die Container zu starten:
+   Docker Compose verwenden, um die Container im Hintergrund zu starten:
 
    ```
    docker-compose up -d
+   ```
+3. **Container stoppen**
+
+   Docker Compose down verwenden, um die Container zu stoppen:
+
+   ```
+   docker-compose down
    ```
